@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'home#index'
+
+  devise_for :users, path_names: {
+      sign_in: 'login',
+      sign_out: 'logout',
+      password: 'secret',
+      confirmation: 'verification',
+      unlock: 'unblock',
+      sign_up: 'register'
+  }
 
   resources :operations
   resources :people_sims
