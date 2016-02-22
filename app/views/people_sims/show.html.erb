@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>People:</strong>
+  <%= @people_sim.people %>
+</p>
+
+<p>
+  <strong>Sim carte:</strong>
+  <%= @people_sim.sim_carte %>
+</p>
+
+<%= link_to 'Edit', edit_people_sim_path(@people_sim) %> |
+<%= link_to 'Back', people_sims_path %>

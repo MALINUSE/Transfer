@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sim Cartes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sim_cartes.each do |sim_carte| %>
+      <tr>
+        <td><%= sim_carte.numero %></td>
+        <td><%= link_to 'Show', sim_carte %></td>
+        <td><%= link_to 'Edit', edit_sim_carte_path(sim_carte) %></td>
+        <td><%= link_to 'Destroy', sim_carte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sim carte', new_sim_carte_path %>

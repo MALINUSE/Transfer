@@ -1,0 +1,21 @@
+<%= form_for(@sim_carte) do |f| %>
+  <% if @sim_carte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sim_carte.errors.count, "error") %> prohibited this sim_carte from being saved:</h2>
+
+      <ul>
+      <% @sim_carte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero %><br>
+    <%= f.text_field :numero %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

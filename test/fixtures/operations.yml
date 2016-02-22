@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_owner: MyString
+  number_sender: MyString
+  type_op: MyString
+
+two:
+  number_owner: MyString
+  number_sender: MyString
+  type_op: MyString

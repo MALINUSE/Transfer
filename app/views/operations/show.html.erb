@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number owner:</strong>
+  <%= @operation.number_owner %>
+</p>
+
+<p>
+  <strong>Number sender:</strong>
+  <%= @operation.number_sender %>
+</p>
+
+<p>
+  <strong>Type op:</strong>
+  <%= @operation.type_op %>
+</p>
+
+<%= link_to 'Edit', edit_operation_path(@operation) %> |
+<%= link_to 'Back', operations_path %>
