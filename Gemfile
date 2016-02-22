@@ -7,6 +7,8 @@ gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -44,4 +46,19 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-rails', '~> 1.1'
+gem 'capistrano-passenger'
+
+# DROIT
+gem 'devise', '~> 3.2'
+gem 'cancancan', '1.9.2'
+gem 'devise-bootstrap-views'
+
+gem 'font-awesome-sass', '~> 4.5.0'
+gem 'bootstrap_form', '~> 2.3.0'
+
+gem 'paperclip', '~> 4.3'
+gem 'bh', '~> 1.3.4'
 

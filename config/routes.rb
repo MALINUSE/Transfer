@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'home#index'
+
   resources :operations
   resources :people_sims
   resources :sim_cartes
