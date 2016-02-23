@@ -33,6 +33,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :nom
       t.string :prenom
+      t.string :role, default: 'Inviter'
+
 
       t.timestamps null: false
     end
