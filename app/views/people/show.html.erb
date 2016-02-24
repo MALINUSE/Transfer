@@ -1,24 +1,42 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "#{@person.codecustom}") %>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              people_path, :class => 'btn' %>
+</div>
 
-<p>
-  <strong>Date nai:</strong>
-  <%= @person.date_nai %>
-</p>
 
-<p>
-  <strong>Lieu nai:</strong>
-  <%= @person.lieu_nai %>
-</p>
+<%= panel heading: "CLIENT N°: #{@person.codecustom} ", context: :info, id: 'panel', class: :en, data: {js: 1} do %>
+    <div class='panel-body'>
+      <%= nav layout: :justified do %>
+          <%= link_to 'Profile', "#one", data: {toggle: 'tab'} %>
+          <%= link_to "Operations #{@operations.size}", "#two", data: {toggle: 'tab'} %>
+          <%= link_to "SIM #{@people_sims.size}", "#three", data: {toggle: 'tab'} %>
+      <% end %>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+      <div class="tab-content">
+        <div id="one" class="tab-pane active">
+          <%= render :partial => 'profile' %>
+        </div>
+        <div id="two" class="tab-pane">
+          <% if @operations.size!=0 %>
+              <%= render 'operations' %>
+          <% else %>
+              <h1><%= 'No found operations!!!' %></h1>
+          <% end %>
+        </div>
+        <div id="three" class="tab-pane">
+          <% if @people_sims.size!=0 %>
+              <%= render :partial => 'sim' %>
+          <% else %>
+              <h1><%= 'No found sim!!!' %></h1>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+<% end %>
+
+
+

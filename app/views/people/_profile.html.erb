@@ -1,0 +1,24 @@
+<div class="panel-body">
+  <div class="col-xs-2 text-center">
+    <% if @person.avatar.exists? %>
+        <%= image_tag @person.avatar.url(:medium), :class => "img-responsive img-thumbnail  mini" %>
+    <% else %>
+        <%= 'Image' %>
+    <% end %>
+  </div>
+  <div class="col-xs-8">
+    <address>
+      <h3><%= @person.first_name+' '+@person.last_name %></h3>
+      <abbr title="Sexe">Sexe:</abbr> <%= @person.sexe %><br/>
+
+      <abbr title="phone">P:</abbr> <%= @person.contact %><br/>
+      <abbr title="email">@:</abbr> <%= @person.email %><br/>
+      <abbr title="Country">Country:</abbr> <%= @person.country %><br/>
+      <abbr title="City">City:</abbr> <%= @person.city %><br/>
+      <abbr title="address">Add:</abbr> <%= @person.address %><br/>
+    </address>
+  </div>
+
+
+
+</div>

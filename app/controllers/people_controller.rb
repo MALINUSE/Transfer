@@ -10,6 +10,9 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
+    @operations = @person.operations
+    @people_sims = @person.people_sims.jointure_sim_carte
+
   end
 
   # GET /people/new

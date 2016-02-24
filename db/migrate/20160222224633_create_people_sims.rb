@@ -4,7 +4,7 @@ class CreatePeopleSims < ActiveRecord::Migration
       t.references :person, index: true, foreign_key: true
       t.references :sim_carte, index: true, foreign_key: true
 
-      t.timestamps null: false
+      t.timestamps default: Time.now
     end
   end
 end

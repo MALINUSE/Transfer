@@ -1,0 +1,19 @@
+<h1>Listing Person Sims</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Sim carte</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @people_sims.each do |people_sim| %>
+      <tr>
+        <td><%= people_sim.numero %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
